@@ -1,25 +1,24 @@
 /*
  * @Author: Nic_
  * @Date: 2023-04-19 10:39:07
- * @LastEditTime: 2023-04-19 10:53:42
+ * @LastEditTime: 2023-04-19 11:40:09
  * @LastEditors: Nic_
- * @Description: 
+ * @Description:
  * @FilePath: /axios-ts-monorepo/packages/playground/src/App.tsx
  */
-import { useState,useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { test } from '@axios/core/src/index'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { test } from "@axios/core/src/index";
 
 function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    test();
+    test()
   }, [])
 
-  
   return (
     <div className="App">
       <div>
@@ -32,7 +31,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
         <p>
