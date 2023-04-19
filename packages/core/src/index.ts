@@ -7,5 +7,5 @@
  * @FilePath: /axios-ts-monorepo/packages/axios-core/src/index.ts
  */
 export const test = () => {
-    console.log(`11111`, 11111)
+    console.log(`11111`, 11112)
 }
