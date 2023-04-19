@@ -1,0 +1,25 @@
+{
+    "extends": "@antfu",
+    "rules": {
+        "prefer-const": 0,
+        "no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    "unocss"
+                ]
+            }
+        ],
+        "no-console": "off",
+        "vue/component-tags-order": [
+            "error",
+            {
+                "order": [
+                    "template",
+                    "script",
+                    "style"
+                ]
+            }
+        ]
+    }
+}
