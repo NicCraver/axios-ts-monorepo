@@ -1,7 +1,7 @@
 /*
  * @Author: Nic_
  * @Date: 2023-04-19 10:39:07
- * @LastEditTime: 2023-04-19 11:40:09
+ * @LastEditTime: 2023-04-19 13:36:36
  * @LastEditors: Nic_
  * @Description:
  * @FilePath: /axios-ts-monorepo/packages/playground/src/App.tsx
@@ -14,6 +14,10 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // function name(params:type) {
+  // http://rap2api.taobao.org/app/mock/262203/example/getApi
+  // }
 
   useEffect(() => {
     test()
