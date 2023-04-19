@@ -1,7 +1,7 @@
 /*
  * @Author: Nic_
  * @Date: 2023-04-19 10:39:07
- * @LastEditTime: 2023-04-19 13:36:36
+ * @LastEditTime: 2023-04-19 13:38:51
  * @LastEditors: Nic_
  * @Description:
  * @FilePath: /axios-ts-monorepo/packages/playground/src/App.tsx
@@ -15,12 +15,27 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  // function name(params:type) {
-  // http://rap2api.taobao.org/app/mock/262203/example/getApi
-  // }
+  function go() {
+    const url = 'http://rap2api.taobao.org/app/mock/262203/example/getApi'
+
+    fetch(url)
+      .then((response) => {
+        if (response.ok) {
+          // 成功获取数据，可以在这里处理返回的数据
+          return response.json()
+        }
+        else {
+          // 获取数据失败，可以在这里处理错误信息
+          throw new Error(`请求失败：${response.status} ${response.statusText}`)
+        }
+      })
+      .then(data => console.log(data))
+      .catch(error => console.error(error))
+  }
 
   useEffect(() => {
     test()
+    go()
   }, [])
 
   return (
