@@ -2,14 +2,16 @@
   "name": "axios-ts-monorepo",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "serve": "pnpm run --parallel dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
     "eslint": "^8.38.0",
